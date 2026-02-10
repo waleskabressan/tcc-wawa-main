@@ -64,8 +64,8 @@ const reuniaoSchema = z.object({
   description: z.string().optional(),
   startDate: z.string().min(1, 'A data de início é obrigatória'),
   endDate: z.string().min(1, 'A data de término é obrigatória'),
-  localId: z.coerce.number().optional(),
-  presentationId: z.coerce.number(),
+  localId: z.number().optional(),
+  presentationId: z.number(),
 });
 
 type ReuniaoFormData = z.infer<typeof reuniaoSchema>;

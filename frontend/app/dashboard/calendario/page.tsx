@@ -168,8 +168,8 @@ export default function CalendarioPage() {
       calendars: SCHEDULE_CALENDARS_CONFIG,
       isDark,
       defaultView: currentView,
-      views: [createViewDay(), createViewWeek(), createViewMonthGrid(), createTimezoneSelectPlugin()],
-      plugins: [calendarControls, dragAndDropPlugin, eventModalPlugin, resizePlugin],
+      views: [createViewDay(), createViewWeek(), createViewMonthGrid()],
+      plugins: [calendarControls, dragAndDropPlugin, eventModalPlugin, resizePlugin, createTimezoneSelectPlugin()],
       events: calendarEvents,
       callbacks: {
         onEventUpdate: async (updatedEvent) => {

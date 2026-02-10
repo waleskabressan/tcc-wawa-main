@@ -55,7 +55,7 @@ import { Plus, Pencil, Trash2, MapPin, Loader2, Users } from 'lucide-react';
 const localSchema = z.object({
   name: z.string().min(2, 'O nome deve ter pelo menos 2 caracteres'),
   description: z.string().optional(),
-  capacity: z.coerce.number().min(1, 'A capacidade deve ser pelo menos 1'),
+  capacity: z.number().min(1, 'A capacidade deve ser pelo menos 1'),
   isActive: z.boolean(),
 });
 
